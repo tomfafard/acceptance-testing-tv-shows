@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%=@title%></title>
+  </head>
+
+  <body>
+    <h2><%=@title + ":"%></h2>
+    </br>
+
+    <ul>
+      <% @tom.favorite_shows.each do |show| %>
+        <%if show[:title] == @title%>
+          <li><h3>Network:</h3> <%=show[:network]%></li>
+            </br>
+          <li><h3>Starting Year:</h3> <%=show[:starting_year]%></li>
+            </br>
+          <li><h3>Synopsis:</h3> <%=show[:synopsis]%></li>
+            </br>
+          <li><h3>Genre:</h3> <%=show[:genre]%></li>
+        <% end %>
+      <% end %>
+      <a href="/"><h1>Back to Favorites List</h1></a>
+    </ul>
+
+  </body>
+</html>

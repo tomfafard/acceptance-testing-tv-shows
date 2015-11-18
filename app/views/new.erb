@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add TV Show:</title>
+  </head>
+
+  <body>
+    <h2>Add Show to Favorites:</h2>
+
+    <form action="/new" method="post">
+      <label for="show_title">Show Title:</label>
+      <input type="text" id="show_title" name="show_title" required>
+          </br></br>
+      <label for="show_network">Show Network:</label>
+      <input type="text" id="show_network" name="show_network" required>
+          </br></br>
+      <label for="show_start">Start Year:</label>
+      <input type="text" id="show_start" name="show_start" required>
+          </br></br>
+      <label for="show_synopsis">Show Synopsis:</label>
+      <input type="text" id="show_synopsis" name="show_synopsis" required>
+          </br></br>
+      <label for="show_genre">Show Genre:</label>
+      <select id="show_genre" name="show_genre">
+        <% @ruby.genres.each do |genre| %>
+          <option value = "<%=genre%>"><%=genre%></option>
+        <% end %>
+      </select>
+         </br></br>
+      <input type="submit" value="Submit">
+    </form>
+
+    </br></br>
+
+    <a href = "/">Back to Favorites List</a>
+
+  </body>
+</html>

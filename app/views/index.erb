@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Favorite Shows</title>
+  </head>
+
+  <body>
+    <h2>List of Shows:</h2>
+
+    <ul>
+      <% @ryan.favorite_shows.each do |show| %>
+        <li><h4><a href="/<%=show[:title]%>"><%= show[:title]+" on "+show[:network] %></a></h4></li>
+      <% end %>
+      <a href="/new"><h1>Add Show to Favorites</h1></a>
+    </ul>
+
+  </body>
+</html>
